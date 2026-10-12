@@ -4,7 +4,7 @@ pipeline {
     IMAGE_NAME = 'admininstagram/jenkins-docker-db-app'
     REGISTRY_CREDENTIALS = 'dockerhub-credentials'
     PATH = "C:\\Users\\Chriss\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
-    COMPOSE_EXE = 'C:\\Users\\Chriss\\.docker\\cli-plugins\\docker-compose.exe'
+    COMPOSE_EXE = 'C:\\ProgramData\\Docker\\cli-plugins\\docker-compose.exe'
   }
   stages {
     stage('Checkout') {
