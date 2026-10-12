@@ -40,8 +40,9 @@ pipeline {
     }
   }
   post {
-    always {
-      echo 'Selesai build'
-    }
-  }
+  	always {
+    	bat(script: 'docker logout', returnStatus: true)
+    	echo 'Selesai build'
+  		}
+	}
 }
