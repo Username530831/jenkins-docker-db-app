@@ -3,6 +3,8 @@ pipeline {
   environment {
     IMAGE_NAME = 'admininstagram/jenkins-docker-db-app'
     REGISTRY_CREDENTIALS = 'dockerhub-credentials'
+    PATH = "C:\\Users\\Chriss\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
+    COMPOSE_EXE = 'C:\\Users\\Chriss\\.docker\\cli-plugins\\docker-compose.exe'
   }
   stages {
     stage('Checkout') {
@@ -33,7 +35,7 @@ pipeline {
     }
     stage('Deploy App + Database') {
       steps {
-        bat 'docker compose -p jenkins-demo up -d --build'
+        bat '"%COMPOSE_EXE%" -p jenkins-demo up -d'
       }
     }
   }
