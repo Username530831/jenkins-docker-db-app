@@ -21,3 +21,5 @@ Stage 3 Build Image  : docker build, tag nomor build + latest
 Stage 4 Push Image   : login dengan credentials, push ke Docker Hub
 Stage 5 Deploy       : docker compose + app Flask + PostgreSQL
 Hasil: http://localhost:5000/db terhubung ke database
+
+Testing Terakhir! 
